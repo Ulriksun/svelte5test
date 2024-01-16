@@ -32,11 +32,16 @@
 		console.log(question);
 	}
 	function handleChange() {
-		console.log(this);
+		console.log(this.value);
+		value = this.value;
+	}
+	function getFeedback() {
+		let selectedAnswer = question.data.alternatives.filter( (i) => i.answer === value);
+		return selectedAnswer.length > 0 ? selectedAnswer[0].feedback : undefined;
 	}
 
 	$effect( () => {
-		feedback = question.data.alternatives.filter( (i) => i.answer === value)[0].feedback;
+		feedback = getFeedback();
 	});
 
 </script>
@@ -53,15 +58,14 @@
 			</h3>
 		</div>
 		<div class="alternatives">
-		<RadioGroup.Root bind:value oninput={handleChange}>
-			{#each question.data.alternatives as alternative (alternative)}
-				<div class="flex items-center space-x-2">
-					<RadioGroup.Item value={alternative.answer} id={alternative.id} />
-					<Label for={alternative.id}>{alternative.answer}</Label>
-				</div>
-			{/each}
-			<RadioGroup.Input name="answer" />
-		</RadioGroup.Root>
+			<fieldset>
+				{#each question.data.alternatives as alternative (alternative)}
+					<div>
+						<input type="radio" name={question.question_id} value={alternative.answer} id={alternative.id} onchange={handleChange}/>
+						<Label for={alternative.answer}>{alternative.answer}</Label>
+					</div>
+				{/each}
+			</fieldset>
 		</div>
 		Value is {value}
 	</div>
@@ -71,3 +75,14 @@
 		{feedback}
 	{/if}
 </div>
+<!--
+<RadioGroup.Root oninput={handleChange}>
+	{#each question.data.alternatives as alternative (alternative)}
+		<div class="flex items-center space-x-2">
+			<RadioGroup.Item value={alternative.answer} id={alternative.id} />
+			<Label for={alternative.id}>{alternative.answer}</Label>
+		</div>
+	{/each}
+	<RadioGroup.Input name="answer" />
+</RadioGroup.Root>
+-->

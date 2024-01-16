@@ -7,7 +7,7 @@
     let width = 400;
     let height = 300;
     import {data} from "$components/data"
-    let value = "Berlin";
+    let value = "";
 </script>
 
 <div style="width: {width}px; height: {height}px; border:solid black">
