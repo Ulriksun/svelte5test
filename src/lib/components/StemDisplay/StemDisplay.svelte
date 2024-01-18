@@ -10,7 +10,7 @@
 </script>
 
 <div class="stem">
-	<div class="title">
+	<div class="title h3">
 		{data.title}
 	</div>
 <!--	<button onclick={ () => {console.log(data)}}> console.log</button>-->
@@ -25,17 +25,23 @@
 <style>
 	:global([ref=question-text]) {
 			/* for text */
-      font: 1.0em "Comic Sans MS", sans-serif;
-			margin: 5px 10px;
+      /* font: 1.0em "Comic Sans MS", sans-serif; */
+			/* margin: 5px 10px; */
+
+			
 	}
 	:global([ref=question-img]) {
 			/* for images and image captions */
-			font: 0.7em "Arial", sans-serif;
-			margin: 2px 5px 5px;
+			/* font: 0.7em "Arial", sans-serif;
+			margin: 2px 5px 5px; */
+
+			
 	}
 	.title {
-			font: 1.5em "Comic Sans MS", sans-serif;
-			margin: 10px 15px 15px;
+			/* font: 1.5em "Comic Sans MS", sans-serif;
+			margin: 10px 15px 15px; */
+
+			margin: var(--size-4) var(--size-5);
 	}
 </style>
 

@@ -1,0 +1,39 @@
+
+@import "reset.css";
+@import "open-props.min.css";
+@import "atoms/colors.css";
+@import "design-tokens.css";
+@import "typography.css";
+@import "layout.css";
+
+@import "themes/light.css";
+@import "themes/pony.css";
+@import "themes/dark.css";
+@import "themes/highcontrast.css";
+@import "theme.css";
+
+@import "components/ui/button.css";
+@import "components/split-panel.css";
+@import "components/switch.css";
+@import "components/tree.css";
+
+@import "utilities.css";
+@import "print.css";
+@import "tw.css";
+
+:not(:defined) {
+    visibility: hidden;
+}
+
+#theme-switch::part(label) {
+    display: none;
+}
+
+#theme-switch::part(base) {
+    margin-bottom: 2.5px;
+}
+
+body { 
+
+    /* background-color: hotpink !important; */
+}

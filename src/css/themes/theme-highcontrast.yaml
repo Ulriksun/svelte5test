@@ -1,0 +1,34 @@
+$schema: https://static.datakortet.no/schema/yoda-theme.schema.yaml
+
+theme:
+    name: highcontrast
+    color-scheme: dark
+    theme-color: black
+    hover-color: blue-1
+
+    text-color:
+        default: gray-1
+        shy: gray-3
+        inverse: gray-12
+
+    background:
+        - gray-12
+        - gray-12
+        - gray-12
+        - gray-12
+        - gray-12
+        - gray-12
+
+    border-color: gray-1
+
+    primary:
+        color: yellow-7
+        text: text-color-inverse
+
+    secondary:
+        color: yellow-8
+        text: text-color-inverse
+
+    tertiary:
+        color: yellow-9
+        text: text-color-inverse
