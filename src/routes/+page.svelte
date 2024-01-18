@@ -16,30 +16,50 @@
     })[0].answer;
     let answerIsCorrect = $derived(selectedAnswer === correctAnswer);
 </script>
-<div style="margin: 30px 30px; width: {width}px; height: {height}px; border:solid black; ">
 
-</div>
-<div style="margin: 30px 30px; width: {width}px; height: {height}px; border:solid black; ">
-<!--  <StemDisplay data={data[0]?.data?.stem} />-->
-  <div class="question">
-    <MultipleChoice data={data[0]} bind:selectedAnswer/>
-  </div>
-  <div class="question">
-    <MultipleChoice data={data[1]} bind:selectedAnswer={selectedSecondAnswer}/>
-  </div>
+<!-- question area -->
+<div id="question-area" class="question-area"
+     style="width: {width}px; height: {height}px;">
+
+  <!--  <StemDisplay data={data[0]?.data?.stem} />-->
+  <MultipleChoice data={data[0]} bind:selectedAnswer/>
+	<div class="question">
+		<MultipleChoice data={data[1]} bind:selectedAnswer={selectedSecondAnswer}/>
+	</div>
+
 </div>
 <p>Kandidaten valgte {selectedAnswer}, som er {answerIsCorrect ? "riktig" : "galt"}</p>
 <p>
   Riktig svar er {correctAnswer}
 </p>
 
+<!-- parent area -->
+<div class="question-controller">
+
+  <p>Kandidaten valgte {selectedAnswer}, som er {answerIsCorrect ? "riktig" : "galt"}</p>
+
+  <p>
+    Riktig svar er {correctAnswer}
+  </p>
+
+</div>
+
+
 <style>
+
+
+  .question-area {
+    border: var(--border-1);
+    border-radius: var(--border-radius-1);
+    margin: var(--size-8);
+    padding: var(--size-5);
+  }
   .question{
-    display:inline-block;
-    vertical-align: top;
+      display:inline-block;
+      vertical-align: top;
   }
   .editor{
-    display:inline-block;
-    vertical-align: top;
+      display:inline-block;
+      vertical-align: top;
   }
 </style>

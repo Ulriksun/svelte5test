@@ -1,0 +1,6 @@
+@import "../design-tokens.css";
+
+
+sl-tree-item::part(label) {
+    color: var(--text-color-shy);
+}

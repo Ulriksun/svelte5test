@@ -1,0 +1,62 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: https://static.datakortet.no/schema/yoda-theme.schema.yaml
+
+title: yoda-schema.yml schema definition
+description: Yoda theme definition format.
+type: object
+required: ["$schema", "theme"]
+
+properties:
+    '$schema':
+        type: string
+        format: uri
+        examples:
+            - https://static.datakortet.no/schema/yoda-theme.schema.yaml
+
+    theme:
+        type: object
+        required: [name, color-scheme, text-color, background, border-color, primary, secondary, tertiary]
+        properties:
+            name: { type: string }
+            color-scheme: { type: string }
+            theme-color: { type: string }
+            
+            text-color:
+                type: object
+                required: [default, shy, inverse]
+                properties:
+                    default: { type: string }
+                    shy: { type: string }
+                    inverse: { type: string }
+
+            background:
+                type: array
+                minItems: 6
+                maxItems: 6
+                items:
+                    type: string
+                    uniqueItems: true
+
+            border-color: { type: string }
+
+            primary:
+                type: object
+                required: [color]
+                properties:
+                    color: { type: string }
+                    text: { type: string }
+
+            secondary:
+                type: object
+                required: [color]
+                properties:
+                    color: { type: string }
+                    text: { type: string }
+
+            tertiary:
+                type: object
+                required: [color]
+                properties:
+                    color: { type: string }
+                    text: { type: string }
+

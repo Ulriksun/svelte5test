@@ -1,0 +1,45 @@
+/*@import "./design-tokens.css";*/
+
+body {
+    background-color: var(--background-color-3);
+    color: var(--text-color);
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: var(--color-primary);
+    text-shadow: none;
+}
+
+::selection {
+    background: var(--color-primary);
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: var(--size-000);
+    border: 0;
+    border-top: var(--border-size-1) solid var(--gray-6);
+    margin: var(--size-3) 0;
+    padding: 0;
+}
+
+input:placeholder-shown {
+    text-overflow: ellipsis;
+}
+
+
+.drawer__panel {
+    background-color: var(--background-color-1);
+}
