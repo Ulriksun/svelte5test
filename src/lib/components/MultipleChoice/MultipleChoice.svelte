@@ -20,9 +20,9 @@
 
 <style>
 	.wrapper{
-			padding: 8px;
-			border: solid orange;
-			width: 480px;
+			padding: var(--padding-1);
+			border: var(--border-2);
+			width: 360px;
 			height: auto;
 			min-height: 480px;
 	}

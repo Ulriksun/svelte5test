@@ -31,16 +31,3 @@
 		font-style: italic;
 	}
 </style>
-
-<!--<style>-->
-<!--    .question-text {-->
-<!--				font: 1.0em "Comic Sans MS", sans-serif;-->
-<!--        border: 3px;-->
-<!--				margin: 0 10px;-->
-<!--    }-->
-<!--    .question-image {-->
-<!--        border: 2px;-->
-<!--				border-radius: 10px;-->
-<!--				margin: 30px;-->
-<!--    }-->
-<!--</style>-->
