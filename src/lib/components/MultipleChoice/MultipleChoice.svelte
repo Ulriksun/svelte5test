@@ -8,5 +8,28 @@
 	} = $props();
 	const stem = data.data?.stem;
 </script>
-<StemDisplay data={stem} />
-<MCSelectOne question={data} bind:selectedAnswer />
+<div class="wrapper">
+<!--	<div style="background-color: red" class="stem"></div>-->
+	<div class="stem">
+		<StemDisplay data={stem} />
+	</div>
+	<div class="alternatives">
+		<MCSelectOne question={data} bind:selectedAnswer />
+	</div>
+</div>
+
+<style>
+	.wrapper{
+			padding: 8px;
+			border: solid orange;
+			width: 480px;
+			height: auto;
+			min-height: 480px;
+	}
+	.stem{
+			margin: 0 0;
+	}
+	.alternatives{
+			margin: 0 0;
+	}
+</style>

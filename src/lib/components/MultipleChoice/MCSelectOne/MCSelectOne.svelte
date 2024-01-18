@@ -71,7 +71,7 @@
 	{#if (provideFeedback)}
 		<!-- Provide feedback if available -->
 		{#if (feedback)}
-			{feedback}
+			{@html feedback}
 		{:else if (!selectedAnswer)}
 			No selected answer
 		{:else}
@@ -83,23 +83,12 @@
 <style>
 	.alternatives {
 			margin: 10px 30px;
-			font: 1.0em "Times New Roman", sans-serif;
+			font: 1.0em system-ui;
 	}
 	.feedback {
 			margin: 10px;
-			font: 0.9em "Times New Roman", sans-serif;
+			font: 1.0em system-ui;
 	}.correct{
-			font: 0.9em "Lucida Calligraphy", sans-serif;
+			font: 1.0em system-ui, "Webdings";
 		 }
 </style>
-<!--
-<RadioGroup.Root oninput={handleChange}>
-	{#each question.data.alternatives as alternative (alternative)}
-		<div class="flex items-center space-x-2">
-			<RadioGroup.Item selectedAnswer={alternative.answer} id={alternative.id} />
-			<Label for={alternative.id}>{alternative.answer}</Label>
-		</div>
-	{/each}
-	<RadioGroup.Input name="answer" />
-</RadioGroup.Root>
--->

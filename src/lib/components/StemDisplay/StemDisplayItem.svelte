@@ -1,12 +1,11 @@
 <script>
 	let {
 		item,
-		ref = "noref",
+		ref = "noref", // question-text or question-img, to enable styling from parent component
 	} = $props();
 </script>
 
 <div {ref}>
-<!--	<button onclick={ () => console.log(item) }>item</button>-->
 	{#if (item.text)}
 		{@html item.text}
 	{:else if (item.img)}
