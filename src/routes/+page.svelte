@@ -16,13 +16,35 @@
     let answerIsCorrect = $derived(selectedAnswer === correctAnswer);
 </script>
 
-<div style="margin: 0 50px; width: {width}px; height: {height}px; border:solid black;">
-<!--  <StemDisplay data={data[0]?.data?.stem} />-->
+<!-- question area -->
+<div id="question-area" class="question-area" 
+     style="width: {width}px; height: {height}px;">
+
+  <!--  <StemDisplay data={data[0]?.data?.stem} />-->
   <MultipleChoice data={data[0]} bind:selectedAnswer/>
+
 </div>
-<p>Kandidaten valgte {selectedAnswer}, som er {answerIsCorrect ? "riktig" : "galt"}</p>
-<p>
-  Riktig svar er {correctAnswer}
-</p>
+
+<!-- parent area -->
+<div class="question-controller">
   
+  <p>Kandidaten valgte {selectedAnswer}, som er {answerIsCorrect ? "riktig" : "galt"}</p>
   
+  <p>
+    Riktig svar er {correctAnswer}
+  </p>
+    
+</div>
+
+
+<style>
+
+  
+  .question-area {
+    border: var(--border-1);
+    border-radius: var(--border-radius-1);
+    margin: var(--size-8);
+    padding: var(--size-5);
+  }
+
+</style>

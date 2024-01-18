@@ -1,0 +1,177 @@
+/*
+ *  Some of these are atoms and should be moved into
+ *  their own structure under :where(html) or
+ *  @layer(atoms) { ... }
+ */
+
+:root {
+
+    /* ---- start atoms ---- */
+
+
+
+    --font-size-xs: 0.75rem;
+    --font-size-sm: 0.875rem;
+    --font-size-base: 1rem;
+    --font-size-lg: 1.125rem;
+    --font-size-xl: 1.25rem;
+    --font-size-2xl: 1.5rem;
+    --font-size-3xl: 1.875rem;
+    --font-size-4xl: 2.25rem;
+    --font-size-5xl: 3rem;
+    --font-size-6xl: 3.75rem;
+    --font-size-7xl: 4.5rem;
+    --font-size-8xl: 6rem;
+    --font-size-9xl: 8rem;
+
+    --line-height-3: 0.75rem;
+    --line-height-4: 1rem;
+    --line-height-5: 1.25rem;
+    --line-height-6: 1.5rem;
+    --line-height-7: 1.75rem;
+    --line-height-8: 2rem;
+    --line-height-9: 2.25rem;
+    --line-height-10: 2.5rem;
+    --line-height-none: 1;
+    --line-height-tight: 1.25;
+    --line-height-snug: 1.375;
+    --line-height-normal: 1.5;
+    --line-height-relaxed: 1.625;
+    --line-height-loose: 2;
+
+    --font-weight-thin: 100;
+    --font-weight-extralight: 200;
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --font-weight-extrabold: 800;
+    --font-weight-black: 900;
+
+    --size-0: 0px;
+    --size-1: 0.25rem;
+    --size-2: 0.5rem;
+    --size-3: 0.75rem;
+    --size-4: 1rem;
+    --size-5: 1.25rem;
+    --size-6: 1.5rem;
+    --size-7: 1.75rem;
+    --size-8: 2rem;
+    --size-9: 2.25rem;
+    --size-10: 2.5rem;
+    --size-11: 2.75rem;
+    --size-12: 3rem;
+    --size-14: 3.5rem;
+    --size-16: 4rem;
+    --size-20: 5rem;
+    --size-24: 6rem;
+    --size-28: 7rem;
+    --size-32: 8rem;
+    --size-36: 9rem;
+    --size-40: 10rem;
+    --size-44: 11rem;
+    --size-48: 12rem;
+    --size-52: 13rem;
+    --size-56: 14rem;
+    --size-60: 15rem;
+    --size-64: 16rem;
+    --size-72: 18rem;
+    --size-80: 20rem;
+    --size-96: 24rem;
+    --size-px: 1px;
+    --size-0_5: 0.125rem;
+    --size-1_5: 0.375rem;
+    --size-2_5: 0.625rem;
+    --size-3_5: 0.875rem;
+
+    --border-radius-none: 0px;           /* 0 */
+    --border-radius-sm: 0.125rem;        /* --radius-1 */
+    --border-radius-default: 0.25rem;
+    --border-radius-md: 0.375rem;
+    --border-radius-lg: 0.5rem;
+    --border-radius-xl: 0.75rem;
+    --border-radius-2xl: 1rem;          /* --radius-3 */
+    --border-radius-3xl: 1.5rem;
+    --border-radius-full: 9999px;
+
+
+    /*  ---- end atoms ---- */
+    /* ---- start molecules ---- */
+
+    --padding-1: var(--size-3);
+
+    /* ---- end molecules ---- */
+
+    --font-body: var(--font-weight-4) var(--font-size-1)/var(--font-lineheight-1) var(--font-sans);
+
+    --info-color: var(--indigo-4);
+    --oklch-info-color: var(--oklch-indigo-4);
+    --info-color-text: var(--gray-0);
+    --warning-color: var(--yellow-9);
+    --oklch-warning-color: var(--oklch-yellow-9);
+    --warning-color-text: var(--gray-0);
+    --error-color: var(--red-7);
+    --oklch-error-color: var(--oklch-red-7);
+    --error-color-text: var(--gray-0);
+    --success-color: var(--green-7);
+    --oklch-success-color: var(--oklch-green-7);
+    --success-color-text: var(--gray-0);
+
+    --color-light: var(--gray-0);
+    --oklch-color-light: var(--oklch-gray-0);
+    --color-light-text: var(--gray-11);
+    --color-dark: var(--gray-11);
+    --oklch-color-dark: var(--oklch-gray-11);
+    --color-dark-text: var(--gray-0);
+
+    --accent-color: var(--color-secondary);
+
+    /* default theme */
+    /* from closest to theme color to furthest away */
+    /* --background-color-1: var(--gray-0);
+    --background-color-2: var(--gray-1);
+    --background-color-3: var(--gray-2);
+    --background-color-4: var(--gray-3);
+    --background-color-5: var(--gray-4);
+    --background-color-6: var(--gray-5); */
+
+    /* --border-radius-small: var(--radius-2);
+    --border-radius-medium: var(--radius-3);
+    --border-radius-large: var(--radius-4); */
+
+
+    --border-1: var(--border-size-1) solid var(--border-color);
+    --border-2: var(--border-size-2) solid var(--border-color);
+    --border-3: var(--border-size-3) solid var(--border-color);
+    --border-4: var(--border-size-4) solid var(--border-color);
+    --border-5: var(--border-size-5) solid var(--border-color);
+
+
+    --text-color: var(--gray-11);
+    --text-color-shy: var(--gray-8);
+    /* a bit less harsh */
+    --text-color-inverse: var(--gray-0);
+
+    --color-primary: var(--green-5);
+    --color-primary-oklch: var(--oklch-green-5);
+    --color-primary-text: var(--text-color);
+
+    --color-secondary: var(--green-9);
+    --color-secondary-text: var(--text-color-inverse);
+
+    --color-tertiary: var(--green-4);
+    --color-tertiary-text: var(--text-color-inverse);
+
+    --logo-color: var(--green-9);
+    --hover-color: var(--green-2);
+
+    /* Components */
+
+    --panel-background: var(--background-color-1);
+    --panel-border-color: var(--border-color);
+    --panel-border-width: var(--border-size-1);
+    --panel-border: var(--panel-border-width) solid var(--panel-border-color);
+    --panel-border-radius: var(--border-radius-medium);
+    --panel-spacing: var(--size-3);
+}

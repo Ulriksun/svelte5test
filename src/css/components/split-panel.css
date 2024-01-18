@@ -1,0 +1,40 @@
+@import "../design-tokens.css";
+
+.split-panel-divider sl-split-panel {
+    --divider-width: 2px;
+}
+
+.split-panel-divider sl-split-panel::part(divider) {
+    background-color: var(--color-tertiary);
+}
+
+.split-panel-divider sl-icon.divider {
+    position: absolute;
+    border-radius: var(--radius-2);
+    background: var(--color-tertiary);
+    color: var(--text-color);
+    padding: 0.5rem 0.125rem;
+}
+
+/* the divider line when it has focus */
+.split-panel-divider sl-split-panel::part(divider):focus-visible {
+    background-color: var(--color-secondary);
+}
+
+.split-panel-divider sl-split-panel:focus-within sl-icon {
+    background-color: var(--color-secondary);
+    color: var(--text-color-inverse);
+}
+
+.split--panel {
+    padding-block: var(--padding-1);
+}
+
+.right.split--panel {
+    padding-inline: var(--padding-1);
+}
+
+.left.split--panel {
+    padding-right: var(--padding-1);
+    overflow: clip;
+}

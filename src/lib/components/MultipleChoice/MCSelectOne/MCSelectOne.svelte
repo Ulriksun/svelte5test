@@ -82,15 +82,30 @@
 
 <style>
 	.alternatives {
-			margin: 10px 30px;
-			font: 1.0em "Times New Roman", sans-serif;
+		/* margin: 10px 30px;
+		font: 1.0em "Times New Roman", sans-serif; */
+		font-size: var(--font-size-base);
 	}
+
+	.alternatives > fieldset {
+		margin-block: var(--size-4);
+		padding-inline: var(--size-4);
+	}
+
+	.alternatives label {
+		line-height: var(--line-height-loose);
+	}
+
 	.feedback {
-			margin: 10px;
-			font: 0.9em "Times New Roman", sans-serif;
-	}.correct{
+		/* margin: 10px; */
+		margin: var(--size-4);
+		/* font: 0.9em "Times New Roman", sans-serif; */
+		font-size: var(--font-size-sm);
+	}
+	
+	.correct {
 			font: 0.9em "Lucida Calligraphy", sans-serif;
-		 }
+	}
 </style>
 <!--
 <RadioGroup.Root oninput={handleChange}>

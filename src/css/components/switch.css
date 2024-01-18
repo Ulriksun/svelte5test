@@ -1,0 +1,4 @@
+
+sl-switch::part(control) {
+    background-color: var(--color-secondary);
+}
