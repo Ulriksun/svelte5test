@@ -6,7 +6,7 @@
 </script>
 
 <div {ref} class="stem-display-item">
-<!--	<button onclick={ () => console.log(item) }>item</button>-->
+	<button onclick={ () => console.log(item) }>item</button>
 	{#if (item.text)}
 		{@html item.text}
 	{:else if (item.img)}

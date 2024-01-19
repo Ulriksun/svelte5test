@@ -1,16 +1,36 @@
 <script>
 	import TextInput from '$components/Editors/MCEditor/TextInput.svelte';
+	import { MultipleChoice } from '$components/MultipleChoice';
+	import {setContext} from 'svelte';
+	import { Question } from '@/question.svelte.js';
+	import { QuestionEditor } from '$components/Editors/QuestionEditor';
+
 	let {
 		data,
-		question,
 	} = $props();
-	let value = $state(question);
-	$effect( () => {
-		question = value;
-		data.data.stem.content[0] = {text: value};
-	});
+	const question = new Question(data);
+	setContext('questionData', question);
+	let value = $state("");
+	function update() {
+		console.log(value);
+	}
 </script>
 
-<TextInput bind:value />
-<button onclick={ () => console.log(question, data)}> in MCEditor </button>
+<div class="editor">
+	<QuestionEditor data/>
+</div>
+<div class="question preview">
+	<MultipleChoice selectedAnswer="" isPreview/>
+</div>
 
+<style>
+	.question{
+			display: inline-block;
+			vertical-align: top;
+	}
+	.editor{
+			display: inline-block;
+			vertical-align: top;
+			width: 360px;
+	}
+</style>

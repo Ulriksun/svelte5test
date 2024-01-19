@@ -35,12 +35,12 @@
 <!-- question area -->
 <div id="question-area" class="question-area"
 		 style="width: {width}px; height: {height}px;">
-	<div class="question">
-		<MultipleChoice data={qdata[0]} bind:selectedAnswer />
-	</div>
-	<div class="question">
-		<MultipleChoice data={data[1]} bind:selectedAnswer={selectedSecondAnswer} />
-	</div>
+<!--	<div class="question">-->
+<!--		<MultipleChoice questionData={qdata[0]} bind:selectedAnswer />-->
+<!--	</div>-->
+<!--	<div class="question">-->
+<!--		<MultipleChoice data={data[1]} bind:selectedAnswer={selectedSecondAnswer} />-->
+<!--	</div>-->
 	<div class="editor">
 		<MCEditor bind:question bind:data={data[0]}/>
 		<button onclick={ () => handleSubmit()}>in +page.svelte</button>
@@ -73,9 +73,10 @@
         vertical-align: top;
     }
 
-    .editor {
-        display: inline-block;
-        vertical-align: top;
-    }
+    /*.editor {*/
+    /*    display: inline-block;*/
+    /*    vertical-align: top;*/
+		/*		width: 360px;*/
+    /*}*/
 
 </style>

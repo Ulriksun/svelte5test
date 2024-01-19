@@ -1,20 +1,24 @@
 <script>
 	import { StemDisplay } from '$components/StemDisplay';
 	import { MCSelectOne } from '$components/MultipleChoice/MCSelectOne';
+	import { getContext } from 'svelte';
 
 	let {
-		data = {},
+		//questionData = {},
 		selectedAnswer,
+		isPreview = false,
 	} = $props();
-	const stem = data.data?.stem;
+	const question = getContext('questionData');
 </script>
 <div class="wrapper">
 <!--	<div style="background-color: red" class="stem"></div>-->
 	<div class="stem">
-		<StemDisplay data={stem} />
+		<!--{#key stem}-->
+			<StemDisplay bind:stem={question.stem} />
+		<!--{/key}-->
 	</div>
 	<div class="alternatives">
-		<MCSelectOne question={data} bind:selectedAnswer />
+		<MCSelectOne bind:alternatives={question.alternatives} bind:selectedAnswer questionId={question.questionId} scoring={question.scoring}/>
 	</div>
 </div>
 
