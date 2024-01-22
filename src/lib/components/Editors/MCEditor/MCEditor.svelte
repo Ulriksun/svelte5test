@@ -9,6 +9,8 @@
 		data,
 	} = $props();
 	const question = new Question(data);
+	const content = question.content;
+	const alternatives = $state(question.alternatives);
 	setContext('questionData', question);
 	let value = $state("");
 	function update() {
@@ -22,6 +24,7 @@
 <div class="question preview">
 	<MultipleChoice selectedAnswer="" isPreview/>
 </div>
+<button onclick={() => console.log(question.content, alternatives)}>log</button>
 
 <style>
 	.question{

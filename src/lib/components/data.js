@@ -49,7 +49,7 @@ export let data = [
 					correct: false,
 					points: 0,
 					feedback: 'No, Madrid is the capital of Spain.'
-				}
+				},
 			]
 		}
 	},

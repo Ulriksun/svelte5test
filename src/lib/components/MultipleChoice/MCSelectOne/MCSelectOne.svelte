@@ -12,12 +12,15 @@
 		selectedAnswer,
 	} = $props();
 
-	const answerMap = Object.fromEntries(alternatives.map(a => [a.answer, a]));
+	let answerMap = $derived(Object.fromEntries(alternatives.map(a => [a.answer, a])));
 	let feedback = $derived(answerMap[selectedAnswer]?.feedback);
 	const provideFeedback = scoring.provide_feedback;
 	let correct = $derived(answerMap[selectedAnswer]?.correct);
-</script>
+	$effect( () => {
 
+	})
+</script>
+<button onclick={() => console.log(alternatives)}>log alternatives</button>
 <div class="alternatives">
 	<fieldset>
 		{#each alternatives as alternative (alternative)}
@@ -30,6 +33,7 @@
 			</div>
 		{/each}
 	</fieldset>
+
 </div>
 <div class={"feedback" + (correct ? " correct" : "")}>
 	{#if (provideFeedback)}
